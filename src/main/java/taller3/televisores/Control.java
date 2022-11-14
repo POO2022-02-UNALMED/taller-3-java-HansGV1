@@ -8,11 +8,11 @@ public class Control {
 		this.tv.setControl(this);
 	}
 	
-	public void setTV(TV te) {
+	public void setTv(TV te) {
 		this.tv = te;
 	}
 	
-	public TV getTV() {
+	public TV getTv() {
 		return this.tv;
 	}
 	
@@ -33,11 +33,11 @@ public class Control {
 	}
 	
 	public void volumenUp() {
-		this.tv.volumeUp();
+		this.tv.volumenUp();
 	}
 	
 	public void volumeDown() {
-		this.tv.volumeDown();
+		this.tv.volumenDown();
 	}
 	
 	public void setCanal(int can) {

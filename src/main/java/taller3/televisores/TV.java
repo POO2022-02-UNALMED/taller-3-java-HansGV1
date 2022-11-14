@@ -12,6 +12,7 @@ public class TV {
 	public TV(Marca mar, boolean estad){
 		this.marca = mar;
 		this.estado = estad;
+		setNumTV(TV.getNumTV()+1);
 	}
 	
 	public void setMarca(Marca ma) {
@@ -52,20 +53,20 @@ public class TV {
 		}
 	}
 	
-	public Object getCanal() {
+	public int getCanal() {
 		if (estado == true) {
 			return this.canal;
 		}
 		else{
-			return "Por favor, encienda el televisor.";
+			return 1;
 		}
 	}
 	
-	public void setnumTV(int num) {
+	public static void setNumTV(int num) {
 		TV.numTV = num;
 	}
 	
-	public int getnumTV() {
+	public static int getNumTV() {
 		return TV.numTV;
 	}
 	
@@ -93,13 +94,13 @@ public class TV {
 		}
 	}
 	
-	public void volumeUp() {
+	public void volumenUp() {
 		if (this.volumen>= 0 && this.volumen < 7 && this.estado == true) {
 			this.volumen++;
 		}
 	}
 	
-	public void volumeDown() {
+	public void volumenDown() {
 		if (this.volumen> 0 && this.volumen <= 7 && this.estado == true) {
 			this.volumen--;
 		}
